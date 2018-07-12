@@ -1,0 +1,839 @@
+float - used for decimal numbers
+int - integer
+str - storing strings
+input assignment statement - variable = input (prompt )leave a space after the last character
+Note: input is best for numerical values, it is not good for strings
+raw-input - is used for reading string
+raw_input - retrieves all keyboard input as a string
+***********
+math operators
+% - calculates remainder
+** - exponent raises a number to a power
+two int values will result in a int value, two float values will result in a float
+z = float(y/x) - the float statement converts y/x result to a flot but doesnt convert the individual values.
+\ backslash brakes up statements into multiple lines
+\n - separate into a new line
+\t - prints every 8 characters to give equal spacing
+************
+functions are used to breakup long complex program.
+several benefits "simpler code to manage, code reuse, better testing, faster development, easier facilitation o "
+To define a function --> def function-name() - which is a function header:
+
+passing multiple arguments
+ex. def main()
+	print ''
+	show_sum(x, y)
+def show_sum(n1, n2)
+	results = n1 + n2 = x + y = 
+	print results
+
+Keywork arguments
+ex. show_interest (rate=0.01, periods=10, principal=10000.0)
+def show_interest(principal, rate, periods)
+although the arguments are not placed in the same order, given that each of a particular
+keyword it makes it easy to find later.
+
+
+
+mixing keywork arguments with positional arguments
+to be able to that the position argument must appear first.
+ex. show_interest(10000, rate=0.01, periods=10)
+if not placed in this order and ERROR will occur.
+
+keyword global - declares something is global - ex. global number
+number becomes a variable that is decalred to be global by the global command
+**********************
+Conditional Statements
+if condition:
+    statement
+    statement
+    etc.
+
+boolean expressions --> > greaterThan, < lessThan, >= <= , == equal to != not equal to
+
+If-then - there was no example on if-then in the book.
+
+if-else statement
+if condition:
+    statement
+    statement
+    etc.
+else:
+    statment
+    statment
+    etc.
+
+comparing strings can be done using == --> name1 = zak, name2=mary
+if name1 == name2:
+    statement
+else:
+    statement2
+Note: the above string comparison is only for simple strings, case sensitiev will come later.
+ASCII codes: A-Z are represented by 65-90; a-z are represented by 97-122
+0-9 are represented by 48-57
+
+Nested Decision structures: if-elif-else
+proper indentation (4spaces) are required by python interpreter
+
+multioption if-else conditional statements
+test grades
+if score < x:
+    print()
+else:
+    if score < x1:
+	print()
+    else:
+	if score < x2:
+	    print()
+and continues the same way till the end.
+
+if-elif-else statements
+general format:
+	if condition -1:
+	    statement
+	    statement
+	    etc.
+	elif condition -2:
+	    statement
+	    statement
+	else:
+	    statement
+Note: can insert as many as elif clauses as necessary.
+
+Logical Operators
+and(connects two boolean expressions, both must be true for statement to be true)
+or(connect two boolean expressions, one or both must be true for statement to be true)
+not(unary operator, this operand reverses the truth of its operand, if true then false and if false then true)
+***************
+Loops
+condition controlled (true/false) & count controlled (for or while)
+
+while loop - while a condition is true, do some task - it is a pretest loop.
+
+while condition:
+	statement
+	statement
+	etc...
+
+For loop - count controlled loop
+range function used in for loops - simplifies the process of writing a count controlled. 
+for num in range(5):  - this code is equivalent to for num in [1, 2, 3, 4, 5]
+	print num                                  print num   
+
+for variable in [val1, val2, etc.]:
+	statement
+	statement
+	etc...
+
+for num in range (1, 5):  - this will print from 1 to 4
+print num                 - 1 is the starting value
+
+for num in range (1, 10, 2):
+print num                      - the 2 will be the step increase value
+
+print number, '\t', square - will print on screen with a tab space horizontally
+
+for num in range (10, 1, -1) - 10 is start, 1 is end and -1 is downstep
+
+Augumented Assignment Operators:
+x = x + 1 --> 
+Special operators
++=, -=, *=, /=, %=
+
+sentinel value - is a distinct value that will terminate loop upon the entry of the value
+Input Validation Loops - ensure that if bad data is entered then can be caught.
+Nested Loops - a loop inside another loop.
+
+************************************ 
+Generating random number
+
+Note: prior to using library random number generating codes, there is a shock
+that must be entered at the top of the code "import random", this will allow to activate random generating
+codes that are accessed through the library
+randint - is 
+ex. number = random.randint(1,100) the 1,100 sets the range
+
+random.randint can be send directly to the print statement
+ex. print random.randint(1, 10)
+there are also randrange, random & uniform - which also require the import random statement
+
+Value-returning function  is the same as writing a simple function with the exception
+that it is followed by a return expression.
+ex. def function-name():  --> def sum(n1, n2):
+	statement	  -->	  result = n1 + n1
+	statement	  --> 	  return result
+	etc.
+	return expression
+can return multiple variables ex. return x1, x1,...
+
+Mathematical functions
+sqrt --> accepts an argument and return a square root --> result = math.sqrt(x)
+hypotenuse --> gives the hypotenuse of a triangel --> c = math.hypot(a, b)
+
+all values of trigonometric values are in radians
+arc cosine - acos(x)
+arc sine - asin(x)
+arc tangent -  atan(x)
+smallest integer greater than x - ceil(x)
+returns cosine - cos(x)
+assume x is in radians will convert x to degrees - degrees(x)
+returns e^2 - exp(x)
+return largest integer less than or equal to x - floor(x)
+return hypotenuse - hypot(x, y)
+natural logarithm - log(x)
+base-10 logarithm - log10(x)
+assume angle in degrees it converts to radians - radians(x)
+return sine of x in radians - sin(x)
+square root - sqrt(x)
+returns tangent of x - tan(x)
+get value of pi - math.pi
+get value of e - math.e
+
+Store functions in modules
+modules can be written and imported into multiple programs to use its code
+without having to type the same code multiple times for each program.
+
+for math functions we should use import math, just as for the random function
+we have to use import random. and the module file should be in the same folder
+as the program that tries to import it.
+
+import math
+import random
+
+Menu driven programs - display a list of options on the screen
+
+*********************************************
+Files and Exceptions
+write data to and read data from - is refered to an external file onto which
+data is written and read from.
+
+steps that occur with external files - 1. open file, 2. process file (write data to
+or read data from it), 3. close file.
+
+files that can be written are text and binary. a text file contains data that
+has been encoded as text using ASCII or Unicode schemes.
+files with data that is stored as binary is only intended for the program to read.
+Note: contenct of a binary cannot be viewed with a text editor.
+
+there are two types of file system - sequential and direct. sequentail is
+where the file is read completely, direct - allows access to particular data
+
+file object - associated with a specific file
+*** Open a file --> file_variable = open(filename, mode),
+mode - string specifying the mode (reading, writing, etc.)
+strings that can be used to specify a mode - r (reading), w (writing), a (append to the end of the file)
+
+example to open a file for reading data from it
+	customer_file = open('customers.txt', 'r')
+
+to write a file --> sales_file = open('sales.txt', 'w')
+	this command will create a file sales.txt - if such file exists
+	then it will erase the original file.
+Note: if a path does not exist then the program assumes the file is in
+the same folder as the program itself.
+
+to specify a path of a string literal in windows r' should preceed the path
+ex. test_file = open(r'C:\Users\Blake\temp\test.txt', 'w')
+this creates a file and specifies it as raw string. the r is used for python to read the backslashes
+if r wasnt in the path, python would assume backslash as escape sequence, would cause an error.
+
+Method - is a function that belongs to an object and performs operations
+using that same object. use file object's method to performs ops.
+
+file objects have a method called write - which is used to write data to a file
+ex. file_variable.write(string), string is what will be written to the file
+-- to write a string to a file
+customer_file.write('Charles Pace'), or
+name = 'Charles Pace'
+customer_file.write(name)
+
+close file command is --> customer_file.close()
+closing file forces the unsaved data in the buffer to be written to the file
+
+to read contents of a file --> 
+infile=open('x.txt', 'r')
+file_contents=infile.read()
+infile.close()
+print(file_contents)
+
+readline method will allow to read a file line by line.
+infile = open('x.txt', 'r')
+line1 = infile.readline()
+infile.close()
+
+stripping the specific characters from the end of the string.
+ex. line1 = line1.rstrip('\n') - this will remove the \n from the line when reading
+
+to append to an existing file
+myfile = open('friends.txt', 'a')
+myfile.write('Matt\n') - with the a above and write will append to a file rather than create new and erase old file
+
+write/read numbers to and from a file must convert to string when writing
+and must convert to int or float when reading from file.
+ex. num1 = int(input('enter a number: '))
+outfile.write(str(num1)+'\n')
+ex2. string_input = infile.readline()
+value = int(string_input)
+
+Writing data to file using loops
+ex. for count in range(1,num_days+1):
+	sales = float(input('Enter sales ' str(count))
+	sales_file.write(str(sales) + '\n')
+
+Reading data of the file using loop and reading beyond the available data
+in python .readline will return ('') empty if read beyond the available data
+this allows to write a while loop.
+
+loop of reading line by line in a file
+ex. for variable in file_object:
+	statement
+	statement
+	etc.
+
+Note: sep='' - this specifies that no space is printed between arguments. 
+if this argument is not passed then a space will be placed.
+if sep='*' - this will separate two arguments with an asterisk sign
+
+remove('coffee.txt') - removes the file
+rename('temp.txt', 'coffee.txt') - renames the temp file to coffee file
+to use remove and rename commands must use import os
+
+exceptions - is an error that occurs while the program is running and halt the program
+exceptions are handled using try/except
+format of try/except:
+try:
+   statement
+   statement
+   etc.
+except exceptionName: - except IOError:
+   statement			statement
+   statement		except ValueError:
+   etc.				statement
+			except:
+				statement
+
+this try/except can be used for catch all errors
+try:
+   statement
+except:
+   stetement
+
+the esle clause used in the try/except
+   try:
+	statement
+	statement
+   except:
+	stat
+	stat
+   else:
+	stat
+	stat
+the else statement executed if an except clause did not accomodate the error
+
+the finally clauses must appear after all of the except clauses
+try:
+except:
+finally: - the finally is used to perform clean up such as closing files
+or other resources (finally executes regardless if an exception occured or not)
+
+Note: if exceptions are not handled then the program will come to a halt
+
+*********************************
+Lists, sequences, tuples
+
+lists are mutable - content can be changed
+tuples are imutable - content cannot be changed
+
+ex. list of integers
+even_numbers = [2, 4, 6, 8] - listed in brackets and separated by comma
+names = ['Molly', 'Steven', 'Will', ..., 'Adrianna']
+a list containing various information
+info = ['Alicia', 27, 1550.87]
+
+builtin list() function in Python are also available
+
+iterating over a list with the for loop
+ex. numbers = [99, 100, 101, 102]
+    for n in numbers:
+	print (n).
+indexing can also be used to read through list.
+print(my_list[0], my_list[1]
+ex.
+index = 0
+while index < 4:
+    print(my_list[index])
+    index += 1
+
+IndexError can be raised if the loop counter goes beyond what is 
+available in the list. so the try/except IndexError should be used
+to prevent the program from crashing.
+
+the len function  - returns the length of a question, or a length of a list
+ex. my_list = [10, 20, 39, 58]
+size = len(my_list)
+
+since lists are mutable - then we can change the value of a particular 
+variable at a particular position in the list
+ex. numbers = [1,2,3,4,5]
+    numbers[0] = 99 - this will change the value 1 to 99 and our list
+will become [99,2,3,4,5].
+
+IndexError can occur if attempting to change a value of a variable that
+is not in in the list due to incorrect index value.
+IndexError exception should be added.
+
+Concatenating lists
+ex.
+list1 = [1,2,3,4]
+list2 = [6,7,8,9]
+allLists = list1 + list2
+print(allLists) = [1,2,3,4,6,7,8,9]
+Note: THE SAME CAN BE DONE FOR STRINGS	
+Note2: LISTS CAN ONLY BE CONCATENATED WITH OTHER LISTS, CANNOT CONCATENATE
+WITH ANYTHING OTHER THAN A LIST. AN EXCEPTION WILL BE THROWN
+
+List Slicing - allows to select more than one variable from the list
+similar to excel when selecting a range
+list_name[start:end] - the start and end are index numbers
+if the start left not specified then it will be set to zero and the 
+same for the end expression
+
+in slicing we can also specify the step value
+ex. print(numbers[1:8:2]), numbers has a list of variables
+1:8 is the range of the values to be retrieved and 2 is the step value
+so when showing on screen - 2,4,6,8
+
+negative values can also be used to go in the backward direction - which
+specifies indexes with respect to the end position
+
+Finding Items in Lists wiht the in Operator
+if x in list:
+    print(x was found)
+else:
+    print(x was not found)
+
+Append method is used to add items to a list. there many other methods in lists
+such as, append, reorder/sort, insert, remove and change.
+some of the methods are: (append(item), index(item), insert(index, item),
+sort(), remove(item), reverse()"reverses the items in the list").
+
+to append to a list
+name_list = []
+name_list.append(x) - will append to the name_list
+
+the index method - allows to find the index of an item in the list
+if the item does not exist, a ValueError exception will be raised
+
+ex. item_index = food.index(item), item is the value entered
+item_index will retrieve the index number of the item value entered
+
+the insert method
+insert will allow to insert an item into a list.
+two arguments must be passed (an index specifying where to insert,
+and the item desired to insert)
+ex. names = [] - names is the list of items
+    names.insert(0, x) - x is the item to be inserted and 0 is the item's index
+
+The sort method
+my_list = []
+my_list.sort()
+
+The remove method - it throws a value error if item does not exist
+list = []
+try:
+    list.remove(item)
+except ValueError:
+
+The reverse method
+list = [1,2,3,4,5]
+list.reverse() - will give a result of [5,4,3,2,1]
+
+The del Statement
+del will deliver the same outcome as the remove --> 
+ex. list = [1,2,3,4,5]
+    del list[2]
+    this will delete the variable with index = 2
+    the final result will be the list excluding 3 since he though thth 
+
+The min and max functions
+min and max work well with a
+max(list) - the higher num
+
+copying lists
+list1 = []
+list2 = list1
+
+totaling the values in a list
+use loop with accumulator
+ex. numbers = []
+    for value in numbers:
+        total+= value
+
+Averaging the Values in a list
+score = []
+len(scores) - will give the number of elements availabel in the list
+average = total/len(scores)
+
+pass a list as an argument to a function
+numbers = []
+value = function(numbers)
+def function(number_values)
+etc...
+
+Return a list from a function
+def number_values():
+   values=[]
+   num = input()
+   values.append(num)
+   return values
+
+working with lists and files
+Writing list content to a file
+ex. file = open('filename', 'w')
+    file.writelines(listname)
+    file.close()
+Note: the method above does not make a new line after each item of the list
+	all is written in a single line with no spacing.
+An alternate to the above method using the for loop to iterate through
+each item.
+
+ex. for item in listname:
+	file.write(item+ '\n')
+    file.close
+
+readline - returns file's content as a list of strings.
+file = open('filename', 'r')
+content = infile.readlines()
+infile.close()
+
+COPYING LISTS
+just equate the two
+list1 = [1, 2]
+list2 = list1
+
+using for loop
+list1 = [1, 3]
+list2 = []
+for item in list1:
+    list2.append(item)
+
+using concatenation
+list1 = [1,2]
+list2 = [] + list1
+
+TWO AND THREE dimensional lists
+such loops are processed through nested loops
+
+ex. value = [[0,0,0,0], 
+             [0,0,0,0],
+             [0,0,0,0]]
+    for r in range(row):
+       for c in range(cols):
+          values[r][c] = random.randint(1,100)
+
+TUPLES - are immutable (cannot be changed)
+tuple = (1, 2, 3, 4, 5)
+
+**********************************************
+Chapter 8 - Strings
+
+iterating over a string using the for loop
+for variable in string:
+    statement
+    statement
+    etc.
+
+len(variable) - will give the length of the string to help perform loops
+
+concatenation is the same using: variable += variable2
+
+strings are immutable - once created cannot be changed, which misleads
+since can concatenate, however it just replaced old with new when using
+concatenation
+
+attempting to change any values of the strings will raise an error.
+
+string slicing can be done 
+ex. fullName = 'Patty Lynn Smith'
+firstName = fullName[6:10]
+
+can increase step reading of strings [6:10:2] - two step string reading
+reading strings in the backwards direction using negative numbers [-5:]
+and it will read strings from last character towards the beginning
+
+use (in) to find something in particular in the string
+ex. text = 'Four score and seven years ago'
+    if 'seve' in text:
+	print('The string "seven" was found. ')
+    else:
+	print('The string "seven" was not found. ')
+
+use (not in) when wanting to ensure that something isnt in the text
+this is the same application as (in) above example.
+
+String Methods
+ex. stringvariable.method(arguments)
+isdigit - return if string contains only numeric digits
+ex. string1 = '1200'
+    if string1.isdigit():
+	print(string1)
+    else:
+	print(not digit)
+
+other string methods are:
+isalnum(letters or digits only), isalpha(letters only), isdigit(numeric only),
+ islower(lowercase letter only), isspace(white spaces in strings),
+ isupper(upper case letters only).
+
+String Modification Methods:
+lower(return all letters in lowercase, other characters unchanged)
+lstrip(leading whitespace characters), lstrip(char) - string containing a character
+rstrip(removes trailing whitespaces), rstrip(char) - copy of string with all instances of char
+strip(removes all whitespaces), strip(char) - copy all instances of char
+upper() - all letters converted to upper case
+
+search and replace method:
+endswith(substrin), find(substring), replace(old, new), 
+startswith(substring)
+
+the find method returns a -1 if the substring is not found.
+
+ex. set1 = first[0:3] - will give the first 3 characters of the entry
+    set2 = last[0:3] - will give the first 3 char of entry
+    set3 = id[-3:] - will give the last 3 char of entry
+loginName = set1 + set2 + set3 - will combine the 3 and give the login id
+
+duplicate a list with a repitition operator (*)
+ex. string_to_copy * n
+ex2. my_string = 'w' * 5
+
+Splitting a String
+ex. my_string = 'one two three four'
+    word_list = my_string.split()
+    output - ['one', 'two', 'three', 'four']
+the split method separates all strings.
+Note: CAN SPECIFY DIFFERENT SEPARATORS 
+    date_string = '11/26/2014
+ex. date_list = date_string.split('/')
+    output = ['11', '26', '2014']
+
+**************************************************
+Dictionary
+
+key-value pair in dictionary.
+dictionary = {'chris':'555, 'julie':'544',...}
+
+key method will return the keys available
+dictionary.keys() --> output = chris, julie,....
+Note: in and not in methods - work the same as in lists
+
+pop method: returns the value associate with the key and remove it
+ex. dictionary.pop(key, default)
+output = default, then remove default and key. key-value pair.
+
+popitem method - returns key-value pair and removes from the dictionary
+which is the same as the pop item, however the value returned is a tuple
+which is immutable.
+
+values method - reutnrs all dictionary's values without the associated keys.
+dictionary.values()
+
+----------------
+sets:
+set is a collection of unique values. works as a mathematical set.
+no two elements can have the same value.
+
+create a set = set(['a', 'b', ....])
+	 set = set('abc')
+the following are errors and will not work
+myset = set('one', 'two', 'three') -ERROR	
+myset = set('one two three') - DOESNT DO WHAT IS INTENDED.
+NOTE: ONLY USE PARENTHESIS AND BRACKETS.
+
+len(myset) - will give the numbers of elements in a set.
+appending to the set. myset.add(1), 
+if an element already exists in the set then it will not be added again
+and it will not raise an error.
+
+myset = set([1, 2, 3])
+output - {1, 2, 3}
+myset.update([4, 5, 6])
+output - {1, 2, 3, 4, 5, 6}
+
+set1 = set([1, 2, 3])
+set2 = set([4, 5, 6])
+set1.update(set2)
+output - {1, 2, 3, 4, 5, 6}
+
+myset.remove(1) - output {2, 3, 4, 5, 6}
+myset.discard(5) - output {2, 3, 4}}
+myset.clear() - output set()
+
+--------------------------
+for loop over sets
+for var in set:
+    statement
+    statement
+    etc...
+
+Union of sets
+set2.union(set2)
+set1 = ([1, 2, 3, 4])
+set2 = ([3, 4, 5, 6])
+set3 = set1.union(set2)
+print(set3)
+output - {1, 2, 3, 4, 5, 6}
+
+using the (|) operator you can also set union of two sets.
+e.x set3 = set1 | set2
+
+find intersection of sets:
+set1.intersection(set2)
+output - {3, 4}
+
+get the difference of the sets
+set3 = set1.difference(set2) - output = {1, 2}
+set3 = set1 - set2 - output = {1, 2}
+
+find symmetric difference
+set3 = set1.symmetric_difference(set2) - output = {1, 2, 5, 6}
+or set3 = set1 ^ set2.
+
+finding subsets and supersets
+set2.issubset(set1), set1.issuperset(set2) - the value to be returned is true or flase
+or 
+set2 <= set1 - output = true - set2 is subset of set 1
+set1 >= set2 - output = true - set1 is superset of set2
+set1 <= set2 - output = false - set1 is not subset of set2
+
+------------------
+serializing/pickling objects - convert object to bytes for later retrieval.
+
+outputfile = open('mydata.dat', 'wb') - opens a .dat file for binary writing
+once the file is open then call the pickle dump function.
+ex. pickle.dump(object, file) - object is the reference of a object you want to pickle
+file - a variable that references the object
+
+the procedure is similar to working with files
+   filename = open(filename.dat, 'wb')
+   pickle.dump(file, filename)
+   filename.close()
+
+to unserialize/unpickle the file
+   open file
+   unpickle it
+   close file
+
+ex. filename = open(filename.dat, 'rb')
+    pb = pickle.load(filename)
+    fileName.close()
+
+import pickle is needed for unpickling objects
+
+-------------------------------
+
+Classes and Object Oriented Programming
+
+procedural programming - is a method centered on the procedures/actions of objects
+Objects are created from abstract data types.
+primary methods of programming used today are procedural and object oriented.
+procedural - a program was made of one or more procedures - think of it
+	as a function created to perform a task/
+
+procedural - centered on creating procedures
+Object Oriented Programming - OOP - is cenetred on creating objects.
+object - is a software entity that contains data and procedures.
+data attributes - data found in objects
+methods - procedures performed by the object, which are functions.
+
+Classes:
+so the __init__(self) - initializes the object that would be worked on throughout.
+the self is not mandatory to be self, but just commonly used.
+ex.
+class Coin:
+    def __init__ (self):
+	self.sideup = "Heads"
+the self.sideup is automatically assigned.
+
+create an object from the coin class - my_coin = Coin()
+Coin() is the class that contains all the objects in it.
+my_coin.toss() - will call the toss method that is found in the Coin class.
+
+Hiding attributes
+to make the attribute private __sideup.
+my_coin.get__sideup()
+
+Store Classes in Modules
+create a file/module coin.py
+and to access the module's methods, we create our variable my_coin
+and equate it to the name of the file then the name of the class with a 
+period in between
+ex. my_coin = coin.Coin()
+
+__str__ - shows/returns the value of objects attributes
+
+mutators are called setters, accessors are called getters
+
+Techniques for designing classes
+Unified Modeling Language (UML) - has three sections: 1. name of class
+2. list of class data attributes. 3. list of class methods
+
+ex. 1.  CellPhone
+    2. 
+    __Manufact
+    __Model
+    __Retail_Price
+    3. 
+    __init__(Manufact, model, price)
+    set_manufact(manufact)
+    set_mode(model)
+    set_retail_price(price)
+    get_manufact()
+    get_model()
+    get_retail_price()
+
+Finding the Classes in a Problem
+techniques:
+1. Get a written description of the problem domain - real-world objects, parties
+	major events related to the problem. the problem should include: physical
+	objects (vehicles, machines, products); 2. any role played by a person
+	(manager, employee, teacher, customer...); 3. results of a business event
+	(customer order, service quotes); 4. recordkeeping items (customer histories
+	payrol records...)
+2. Identify all the nouns(including pronouns and noun phrases) in the description
+	each noun is  apotential Class: noun and noun phrases appear in bold
+	create a list of the nouns, they may be repeated sometimes.
+3. Refine the list to include only the classes that are relevant to the problem.
+	remove the repeated condidates, keep the more general terms. the ones that
+	will remain will have classes created for them.
+	"some nouns may not be needed to solve our problem, therefore, we eliminate them"
+	questions that will decide to have classes or not:
+	1. would you use a group of related values to represent the item's state?
+	2. are there any obvious actions to be performed by the item?
+	if both 1 and 2 are no, it will be simple string or variable stored
+
+it is also important to identify the class's responsibilities:
+ - things the class is responsible for knowing
+ - actions the class is responsible for doing.
+	it is often important/useful to ask
+	1. what is this going going to do.
+
+ex2. 1. Customer
+     2. __name
+        __address
+	__phone
+     3.__init__(self, name, address, phone)
+	set__name(name)
+	    self.__name = name
+	set__address(address)
+	    self.__address = address
+	set__phone(phone
+	get__name()
+	get__address()
+	get__phone()
+	    return self.__phone
+	
+
+
+
+
